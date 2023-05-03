@@ -44,32 +44,35 @@ class Ballistic:
         Максимальное расстояние высчитывается по формуле: V0 * cos(alpha) * t
 
         :return: Расстояние
+        :rtype: float
         """
         if self._distance is None:
             self._distance = self.boost * math.cos(self.alpha) * self.flight_time
         return self._distance
 
     @property
-    def flight_time(self):
+    def flight_time(self) -> float:
         """
         Время полета объекта.
 
         Время полета высчитывается по формуле: 2 * V0 * sin(alpha) / g
 
         :return: Время полета
+        :rtype: float
         """
         if self._flight_time is None:
             self._flight_time = 2 * self.boost * math.sin(self.alpha) / self.g
         return self._flight_time
 
     @property
-    def max_height(self):
+    def max_height(self) -> float:
         """
         Максимальная высота, на которую поднимется объект.
 
         Высота высчитаывается по формуле: V0 * cos(alpha) / 2 * t
 
         :return: Максимальная высота
+        :rtype: float
         """
         if self._max_height is None:
             self._max_height = self.boost * math.cos(self.alpha) / 2 * self.flight_time
