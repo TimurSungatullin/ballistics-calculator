@@ -13,7 +13,7 @@
 
 ### Установка
 
-``` $ pip install ballistics-calculator ```
+``` $ pip install -e git+https://github.com/timursungatullin/ballistics-calculator.git#egg=ballistics_calculator ```
 
 
 ### Использование
